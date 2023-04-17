@@ -4,8 +4,7 @@ class MeritBadge extends LitElement {
   static properties = {
     date: { type: String },
     icon: { type: String },
-    title: { type: String },
-    color: { type: String },
+    title: { type: String }
   }
 
   static styles = css`
@@ -14,7 +13,7 @@ class MeritBadge extends LitElement {
       vertical-align: middle;
       width: 220px;
       height: 220px;
-      background-color: ${this.color};
+      background-color: #bbb;
       border-style: dotted;
       border-color: black;
       border-radius: 50%;
@@ -32,7 +31,7 @@ class MeritBadge extends LitElement {
       text-align: center;
     }
 
-    .date {
+    h3 {
       font-size: 20px;
     }
 
@@ -44,7 +43,7 @@ class MeritBadge extends LitElement {
       object-position: center;
     }
 
-    .title {
+    h2 {
       font-size: 16px;
     }
 
@@ -72,18 +71,17 @@ class MeritBadge extends LitElement {
     this.date = 'Sample Date';
     this.icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
     this.title = 'Sample Title';
-    this.color = '#bbb';
   }
 
   render() {
     return html`
       <div class="badge">
       <div class="badge_content">
-        <p class="date">${this.date}</p>
+        <h3>${this.date}</h3>
         <div class="logo">
           <img src=${this.icon} alt="sample logo">
         </div>
-        <p class="title">${this.title}</p>
+        <h2>${this.title}</h2>
         <div class="buttons">
           <button class="verification"></button>
           <button class="skills"></button>
