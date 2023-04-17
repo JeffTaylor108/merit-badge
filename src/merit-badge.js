@@ -2,7 +2,9 @@ import { LitElement, html, css } from 'lit';
 
 class MeritBadge extends LitElement {
   static properties = {
-    header: { type: String },
+    date: { type: String },
+    icon: { type: String },
+    title: { type: String },
   }
 
   static styles = css`
@@ -66,18 +68,20 @@ class MeritBadge extends LitElement {
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.date = 'Sample Date';
+    this.icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
+    this.title = 'Sample Title';
   }
 
   render() {
     return html`
       <div class="badge">
       <div class="badge_content">
-        <p class="date">Sample Date</p>
+        <p class="date">${date}</p>
         <div class="logo">
-        <img src=https://cdn-icons-png.flaticon.com/512/5405/5405811.png alt="sample logo">
+          <img src=${icon} alt="sample logo">
         </div>
-        <p class="title">Sample Title</p>
+        <p class="title">${title}</p>
         <div class="buttons">
           <button class="verification"></button>
           <button class="skills"></button>
