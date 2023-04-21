@@ -18,11 +18,7 @@ class MeritBadge extends LitElement {
       border-color: black;
       border-radius: 50%;
       padding: 10px;
-      box-shadow:  -1px 1px black,
-            -2px 2px black,
-            -3px 3px black,
-            -4px 4px black,
-            -5px 5px gray;
+      box-shadow: 0 0 0 2px #bbb, 2px 1px 3px 2px rgba(10, 10, 0, 0.5);
     }
 
     .badge_content {
