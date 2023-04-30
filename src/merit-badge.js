@@ -44,7 +44,10 @@ class MeritBadge extends LitElement {
     }
 
     .logo img {
-      width: 75px;
+      position: absolute;
+      top: 25%;
+      left: 35%;
+      width: 90px;
       max-width: 100%;
       height: auto;
       object-fit: cover;
@@ -73,7 +76,18 @@ class MeritBadge extends LitElement {
       background-color: #2E5984;
     }
 
-    
+    .buttons {
+      position: absolute;
+      top: 65%;
+      left: 36%;
+    }
+
+    circle-wrap {
+      position: absolute;
+      top: -10%;
+      left: -12%;
+      transform: translate(-50%, -50%);
+    }
   `;
 
   constructor() {
@@ -88,12 +102,10 @@ class MeritBadge extends LitElement {
     return html`
       <div class="badge">
       <div class="badge_content">
-        <circle-wrap title="${this.title}" date="${this.date}"></circle-wrap>
-        <h3>${this.date}</h3>
+        <circle-wrap class="text_wrap" title="${this.title}" date="${this.date}"></circle-wrap>
         <div class="logo">
           <img src=${this.icon} alt="sample logo">
         </div>
-        <h2>${this.title}</h2>
         <div class="buttons">
           <button class="verification"></button>
           <button class="skills"></button>

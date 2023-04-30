@@ -72,8 +72,8 @@ class CircleWrap extends LitElement {
     this.generateCircularText(
       "circTxt1",
       this.title,
-      90,
-      -170,
+      105,
+      -180,
       -100,
       "font-size: 20px; color:var(--simple-colors-default-theme-accent-2);",
       "transform: scaleY(-1) scaleX(-1); position:absolute"
@@ -81,7 +81,7 @@ class CircleWrap extends LitElement {
     this.generateCircularText(
       "circTxt2",
       this.date,
-      90,
+      110,
       90,
       -40,
       "font-size: 20px; color:var(--simple-colors-default-theme-accent-2);",

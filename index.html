@@ -24,13 +24,19 @@
       background-color: lightsteelblue;
       border-radius: 15px;
     }
+
+    h3 {
+      font-size: 24px;
+      margin-left: 74px;
+    }
   </style>
   <title>merit-badge</title>
 </head>
 
 <body>
+  <h3 id="status">LOCKED</h3>
   <merit-badge
-    date = 'LOCKED';
+    date = ' ';
     icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
     title = 'Research Analysis';
   ></merit-badge>
@@ -43,6 +49,7 @@
         currentDate = new Date().toLocaleDateString();
         document.querySelector("merit-badge").date = currentDate;
         document.querySelector("merit-badge").unlocked = true;
+        document.getElementById("status").innerHTML = "UNLOCKED";
       })
   </script>
 </body>
