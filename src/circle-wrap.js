@@ -1,5 +1,4 @@
 import { LitElement, html, css } from "lit";
-import { SimpleColors } from "@lrnwebcomponents/simple-colors/simple-colors.js";
 const sheet = new CSSStyleSheet();
 
 class CircleWrap extends LitElement {

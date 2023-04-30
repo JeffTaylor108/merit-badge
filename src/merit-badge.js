@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "../src/circle-wrap.js";
 
 class MeritBadge extends LitElement {
   static properties = {
@@ -71,6 +72,8 @@ class MeritBadge extends LitElement {
       border-radius: 10px;
       background-color: #2E5984;
     }
+
+    
   `;
 
   constructor() {
@@ -85,6 +88,7 @@ class MeritBadge extends LitElement {
     return html`
       <div class="badge">
       <div class="badge_content">
+        <circle-wrap title="${this.title}" date="${this.date}"></circle-wrap>
         <h3>${this.date}</h3>
         <div class="logo">
           <img src=${this.icon} alt="sample logo">
