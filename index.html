@@ -16,9 +16,40 @@
       background-color: #ededed;
     }
 
-    .unlock {
-      display: block;
+    .unlock1 {
       margin-left: 66px;
+      margin-top: 10px;
+      padding: 20px;
+      background-color: lightsteelblue;
+      border-radius: 15px;
+    }
+
+    .unlock2 {
+      margin-left: 140px;
+      margin-top: 10px;
+      padding: 20px;
+      background-color: lightsteelblue;
+      border-radius: 15px;
+    }
+
+    .unlock3 {
+      margin-left: 140px;
+      margin-top: 10px;
+      padding: 20px;
+      background-color: lightsteelblue;
+      border-radius: 15px;
+    }
+
+    .unlock4 {
+      margin-left: 140px;
+      margin-top: 10px;
+      padding: 20px;
+      background-color: lightsteelblue;
+      border-radius: 15px;
+    }
+
+    .unlock5 {
+      margin-left: 140px;
       margin-top: 10px;
       padding: 20px;
       background-color: lightsteelblue;
@@ -29,23 +60,79 @@
       font-size: 24px;
       margin-left: 74px;
     }
+
+    #status1 {
+      display: absolute;
+    }
   </style>
   <title>merit-badge</title>
 </head>
 
 <body>
-  <h3 id="status">LOCKED</h3>
+  <h3 id="status1">LOCKED</h3>
+  <h3 id="status2">LOCKED</h3>
+  <h3 id="status3">LOCKED</h3>
+  <h3 id="status4">LOCKED</h3>
+  <h3 id="status5">LOCKED</h3>
   <merit-badge
     date = ' ';
     icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
     title = 'Research Analysis';
   ></merit-badge>
-  <button class="unlock">Unlock Badge</button>
+  <merit-badge
+    date = ' ';
+    icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
+    title = 'Research Analysis';
+  ></merit-badge>
+  <merit-badge
+    date = ' ';
+    icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
+    title = 'Research Analysis';
+  ></merit-badge>
+  <merit-badge
+    date = ' ';
+    icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
+    title = 'Research Analysis';
+  ></merit-badge>
+  <merit-badge
+    date = ' ';
+    icon = 'https://cdn-icons-png.flaticon.com/512/5405/5405811.png';
+    title = 'Research Analysis';
+  ></merit-badge>
+  <button class="unlock1">Unlock Badge</button>
+  <button class="unlock2">Unlock Badge</button>
+  <button class="unlock3">Unlock Badge</button>
+  <button class="unlock4">Unlock Badge</button>
+  <button class="unlock5">Unlock Badge</button>
   <script type="module" src="./src/merit-badge.js"></script>
 
   <script>
     const unlockButton = document.querySelector(".unlock")
     unlockButton.addEventListener('click', function(e) {
+        currentDate = new Date().toLocaleDateString();
+        document.querySelector("merit-badge").date = currentDate;
+        document.querySelector("merit-badge").unlocked = true;
+        document.getElementById("status").innerHTML = "UNLOCKED";
+      })
+      unlockButton.addEventListener('click', function(e) {
+        currentDate = new Date().toLocaleDateString();
+        document.querySelector("merit-badge").date = currentDate;
+        document.querySelector("merit-badge").unlocked = true;
+        document.getElementById("status").innerHTML = "UNLOCKED";
+      })
+      unlockButton.addEventListener('click', function(e) {
+        currentDate = new Date().toLocaleDateString();
+        document.querySelector("merit-badge").date = currentDate;
+        document.querySelector("merit-badge").unlocked = true;
+        document.getElementById("status").innerHTML = "UNLOCKED";
+      })
+      unlockButton.addEventListener('click', function(e) {
+        currentDate = new Date().toLocaleDateString();
+        document.querySelector("merit-badge").date = currentDate;
+        document.querySelector("merit-badge").unlocked = true;
+        document.getElementById("status").innerHTML = "UNLOCKED";
+      })
+      unlockButton.addEventListener('click', function(e) {
         currentDate = new Date().toLocaleDateString();
         document.querySelector("merit-badge").date = currentDate;
         document.querySelector("merit-badge").unlocked = true;
